@@ -1,0 +1,8 @@
+*.pyc
+*.pyo
+*.py~
+*.bak
+/.idea/
+/mainsys/logs/debug.log
+/mainsys/logs/error.log
+/cache/
