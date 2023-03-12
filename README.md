@@ -28,6 +28,9 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 
 如果某个app下的model没有生成，就是用**python3 manage.py makemigrations --empty appname 单独生成**
+- #### docker启动
+docker build -t xxx:v1 
+docker run -d -it --name demo -p 80:8000 xxx:v1  
 
 - #### 创建后台登录的超级用户
 python3 manage.py createsuperuser

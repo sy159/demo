@@ -1,0 +1,15 @@
+FROM python:3.9 AS builder
+
+ENV PROJECT_NAME=Demo
+
+WORKDIR /backend
+ADD . /backend
+# 还有更新啥的就不写了
+RUN pip install -r requirements.txt -i  https://pypi.tuna.tsinghua.edu.cn/simple
+
+EXPOSE 8000
+
+# 还可以添加卷的映射，根据实际情况添加即可
+
+# 可以用uwsgi等部署，这里也可以通过执行sh脚本，这里简单直接启动
+CMD [ "python3", "manage.py", "runserver", "0.0.0.0:8000"]
