@@ -1,6 +1,6 @@
 # xxx demo
 ## 功能简介
-- demo 啦啦啦
+- demo 啦啦啦 因为本地是mysql所以直接用的mysql来实现，就没用PostgreSQL
 
 ------------
 ## 环境安装
@@ -24,7 +24,9 @@ python3 -m pip install -r requirements.txt
 ## 命令启动
 - #### 创建数据库
 python3 manage.py makemigrations
+
 python3 manage.py migrate
+
 如果某个app下的model没有生成，就是用**python3 manage.py makemigrations --empty appname 单独生成**
 
 - #### 创建后台登录的超级用户
